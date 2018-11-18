@@ -50,21 +50,6 @@ let tests = [
   }
 ]
 
-// tests.forEach(function(test) {
-//   it('of ' + test.args.class.name + ' should throw a TypeError', () => {
-//     expect(() => test.args.handler.execute(test.handler.cases.event)).to.throw(
-//       TypeError,
-//       'The parameter must be a valid event'
-//     )
-//   })
-// })
-
-// function* getCases(cases) {
-//   for (let testCase of cases) {
-//     yield testCase
-//   }
-// }
-// let testCase
 tests.forEach(function(test) {
   describe(
     'When using a ' +
