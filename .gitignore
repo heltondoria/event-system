@@ -168,3 +168,4 @@ tags
 
 # Sonarlint
 .sonarlint
+/profile/
