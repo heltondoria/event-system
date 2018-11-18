@@ -4,7 +4,7 @@
   "description": "POC of a event system based on command pattern",
   "main": "index.mjs",
   "scripts": {
-    "test": "mocha **/*.test.js",
+    "test": "nyc mocha --timeout=3000 **/*.test.js",
     "lint": "eslint src --color",
     "build": "babel src --out-dir dist --ignore --source-maps node_modules",
     "watch": "babel src --out-dir dist --ignore --source-maps --watch node_modules",
@@ -29,6 +29,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
     "onchange": "^5.1.0",
     "prettier": "^1.15.2"
   }
