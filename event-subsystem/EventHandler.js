@@ -1,23 +1,17 @@
 module.exports = class EventHandler {
-  constructor() {
-    this._eventId = 'undefined'
+  constructor(eventId) {
+    this._eventId = eventId
   }
 
   getEventId() {
     return this._eventId
   }
 
-  preExecute() {
-    console.log('Called preExecute method from super')
-  }
+  preExecute() {}
 
   execute(event) {}
 
-  postExecute() {
-    console.log('Called postExecute method from super')
-  }
+  postExecute() {}
 
-  handleFailure() {
-    console.log('Called handleFailure method from super')
-  }
+  handleFailure() {}
 }

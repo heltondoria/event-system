@@ -4,13 +4,15 @@ const { Invoker } = require('./event-subsystem')
 
 const handlers = {}
 for (let handlerName in carHandlers) {
-  let handler = new carHandlers[handlerName]()
-  Object.defineProperty(handlers, handler.getEventId(), {
-    value: handler,
-    writable: true,
-    enumerable: true,
-    configurable: true
-  })
+  if (carHandlers.hasOwnProperty(handlerName)) {
+    let handler = new carHandlers[handlerName]()
+    Object.defineProperty(handlers, handler.getEventId(), {
+      value: handler,
+      writable: true,
+      enumerable: true,
+      configurable: true
+    })
+  }
 }
 
 const messages = [

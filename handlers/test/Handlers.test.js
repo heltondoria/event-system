@@ -1,11 +1,13 @@
 const expect = require('chai').expect
 const { carHandlers } = require('../index')
+const { carEvents } = require('../../events')
 
 let tests = [
   {
     handler: {
       class: carHandlers.BookedEventHandler,
       object: new carHandlers.BookedEventHandler(),
+      eventId: carEvents.BOOKED_EVENT,
       cases: [
         { args: null, expected: 'The parameter must be a valid event' },
         { args: {}, expected: 'The parameter must be a valid event' },
@@ -22,6 +24,7 @@ let tests = [
     handler: {
       class: carHandlers.PurchasedEventHandler,
       object: new carHandlers.PurchasedEventHandler(),
+      eventId: carEvents.PURCHASED_EVENT,
       cases: [
         { args: null, expected: 'The parameter must be a valid event' },
         { args: {}, expected: 'The parameter must be a valid event' },
@@ -37,6 +40,7 @@ let tests = [
     handler: {
       class: carHandlers.VisitedEventHandler,
       object: new carHandlers.VisitedEventHandler(),
+      eventId: carEvents.VISITED_EVENT,
       cases: [
         { args: null, expected: 'The parameter must be a valid event' },
         { args: {}, expected: 'The parameter must be a valid event' },
@@ -52,9 +56,9 @@ let tests = [
 
 tests.forEach(function(test) {
   describe(
-    'When using a ' +
+    'When I instantiate a ' +
       test.handler.class.name +
-      ' and calling the function "execute()" passing a event parameter',
+      ' and call the method "execute()" passing a event parameter',
     function() {
       this.slow(10)
       it('should throw a TypeError if the parameter is null', () => {
@@ -76,6 +80,17 @@ tests.forEach(function(test) {
         expect(test.handler.object.execute(test.handler.cases[3].args))
           .to.be.a('string')
           .and.to.equal(test.handler.cases[3].expected)
+      })
+    }
+  )
+
+  describe(
+    'When I create an instance of ' +
+      test.handler.class.name +
+      ' and call method "getEventId()"',
+    function() {
+      it('should return ' + test.handler.eventId.toString(), function() {
+        expect(test.handler.object.getEventId()).to.equal(test.handler.eventId)
       })
     }
   )

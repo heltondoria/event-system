@@ -3,10 +3,10 @@ const { BaseEventHandler } = require('../../event-subsystem')
 
 module.exports = class BookedEventHandler extends BaseEventHandler {
   constructor() {
-    super()
-    super._eventId = carEvents.BOOKED_EVENT
+    super(carEvents.BOOKED_EVENT)
   }
 
+  // noinspection JSMethodCanBeStatic
   execute(event) {
     if (!event || !event['model'] || !event['modelId']) {
       throw TypeError('The parameter must be a valid event')
