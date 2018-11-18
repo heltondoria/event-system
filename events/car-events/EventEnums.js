@@ -1,3 +1,3 @@
-const Enum = require('es6-enum');
+const Enum = require('es6-enum')
 
-module.exports = Enum('BOOKED_EVENT', 'VISITED_EVENT', 'PURCHASED_EVENT');
+module.exports = Enum('BOOKED_EVENT', 'VISITED_EVENT', 'PURCHASED_EVENT')
