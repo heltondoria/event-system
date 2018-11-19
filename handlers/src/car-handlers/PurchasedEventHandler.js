@@ -12,12 +12,13 @@ module.exports = class PurchasedEventHandler extends BaseEventHandler {
       throw TypeError('The parameter must be a valid event')
     }
 
-    return (
+    let result =
       'You have successfully purchased Item ' +
       event.modelId +
       ', a ' +
       event.model
-    )
+    console.log(result)
+    return result
   }
 
   postExecute() {}

@@ -12,13 +12,14 @@ module.exports = class BookedEventHandler extends BaseEventHandler {
       throw TypeError('The parameter must be a valid event')
     }
 
-    return (
+    let result =
       'You have successfully booked a viewing of ' +
       event.model +
       ' ( ' +
       event.modelId +
       ' ) '
-    )
+    console.log(result)
+    return result
   }
 
   postExecute() {}

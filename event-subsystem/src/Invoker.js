@@ -17,7 +17,7 @@ module.exports = class Invoker {
 
     try {
       handler.preExecute()
-      console.log(handler.execute(event))
+      handler.execute(event)
       handler.postExecute()
     } catch (error) {
       handler.handleFailure()

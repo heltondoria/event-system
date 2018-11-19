@@ -12,13 +12,14 @@ module.exports = class VisitedEventHandler extends BaseEventHandler {
       throw TypeError('The parameter must be a valid event')
     }
 
-    return (
+    let result =
       'The information for ' +
       event.model +
       ' with ID ' +
       event.modelId +
       ' is foobar'
-    )
+    console.log(result)
+    return result
   }
 
   postExecute() {}
