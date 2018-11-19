@@ -1,5 +1,5 @@
 const expect = require('chai').expect
-const EventHandler = require('../EventHandler')
+const EventHandler = require('../src/EventHandler')
 
 const event = 'ANYTHING'
 let handler = new EventHandler(event)
