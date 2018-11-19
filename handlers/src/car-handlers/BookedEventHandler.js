@@ -1,9 +1,9 @@
-const { carEvents } = require('../../events')
-const { BaseEventHandler } = require('../../event-subsystem')
+const { carEvents } = require('../../../events/index')
+const { BaseEventHandler } = require('../../../event-subsystem/index')
 
-module.exports = class VisitedEventHandler extends BaseEventHandler {
+module.exports = class BookedEventHandler extends BaseEventHandler {
   constructor() {
-    super(carEvents.VISITED_EVENT)
+    super(carEvents.BOOKED_EVENT)
   }
 
   // noinspection JSMethodCanBeStatic
@@ -13,11 +13,11 @@ module.exports = class VisitedEventHandler extends BaseEventHandler {
     }
 
     return (
-      'The information for ' +
+      'You have successfully booked a viewing of ' +
       event.model +
-      ' with ID ' +
+      ' ( ' +
       event.modelId +
-      ' is foobar'
+      ' ) '
     )
   }
 

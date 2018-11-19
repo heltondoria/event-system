@@ -1,6 +1,6 @@
-const { carHandlers } = require('./handlers')
-const events = require('./events').carEvents
-const { Invoker } = require('./event-subsystem')
+const { carHandlers } = require('../handlers/index')
+const events = require('../events/index').carEvents
+const { Invoker } = require('../event-subsystem/index')
 
 const handlers = {}
 for (let handlerName in carHandlers) {

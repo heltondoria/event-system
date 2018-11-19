@@ -1,4 +1,4 @@
 module.exports = {
-  BaseEventHandler: require('./EventHandler'),
-  Invoker: require('./Invoker')
+  BaseEventHandler: require('./src/EventHandler'),
+  Invoker: require('./src/Invoker')
 }

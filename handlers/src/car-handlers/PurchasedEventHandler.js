@@ -1,5 +1,5 @@
-const { carEvents } = require('../../events')
-const { BaseEventHandler } = require('../../event-subsystem')
+const { carEvents } = require('../../../events/index')
+const { BaseEventHandler } = require('../../../event-subsystem/index')
 
 module.exports = class PurchasedEventHandler extends BaseEventHandler {
   constructor() {

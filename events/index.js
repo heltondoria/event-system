@@ -1,3 +1,3 @@
 module.exports = {
-  carEvents: require('./car-events/EventEnums')
+  carEvents: require('./src/car-events/EventEnums')
 }
