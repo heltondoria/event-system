@@ -21,7 +21,4 @@ module.exports = class VisitedEventHandler extends BaseEventHandler {
     console.log(result)
     return result
   }
-
-  postExecute() {}
-  preExecute() {}
 }

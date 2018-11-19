@@ -35,7 +35,7 @@
     "nyc": "^13.1.0",
     "onchange": "^5.1.0",
     "prettier": "^1.15.2",
-    "sinon": "^5.0.1-next.1",
+    "sinon": "^7.1.1",
     "sinon-chai": "^3.2.0",
     "stryker": "^0.32.0",
     "stryker-api": "^0.21.5",

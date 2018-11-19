@@ -20,7 +20,4 @@ module.exports = class PurchasedEventHandler extends BaseEventHandler {
     console.log(result)
     return result
   }
-
-  postExecute() {}
-  preExecute() {}
 }

@@ -63,3 +63,4 @@ node_modules/
 
 # Striker mutation test framework
 .striker-tmp
+reports

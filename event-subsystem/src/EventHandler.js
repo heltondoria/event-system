@@ -13,5 +13,5 @@ module.exports = class EventHandler {
 
   postExecute() {}
 
-  handleFailure() {}
+  handleFailure(_err) {}
 }
