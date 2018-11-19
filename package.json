@@ -36,6 +36,15 @@
     "onchange": "^5.1.0",
     "prettier": "^1.15.2",
     "sinon": "^5.0.1-next.1",
-    "sinon-chai": "^3.2.0"
+    "sinon-chai": "^3.2.0",
+    "stryker": "^0.32.0",
+    "stryker-api": "^0.21.5",
+    "stryker-babel-transpiler": "^0.7.8",
+    "stryker-html-reporter": "^0.16.7",
+    "stryker-javascript-mutator": "^0.11.4",
+    "stryker-mocha-framework": "^0.13.0",
+    "stryker-mocha-runner": "^0.15.0",
+    "stryker-typescript": "^0.15.4",
+    "stryker-webpack-transpiler": "^0.7.9"
   }
 }
