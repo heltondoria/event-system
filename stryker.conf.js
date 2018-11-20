@@ -7,7 +7,7 @@ module.exports = function(config) {
     transpilers: [],
     testFramework: 'mocha',
     coverageAnalysis: 'perTest',
-    mutate: ['src/**/*.js', 'handlers/**/*.js', 'event-subsystem/**/*.js'],
+    mutate: ['handlers/src/**/*.js', 'event-subsystem/src/**/*.js'],
     mochaOptions: {
       files: '**/*.test.js'
     }
