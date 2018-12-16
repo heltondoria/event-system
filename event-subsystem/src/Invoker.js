@@ -31,11 +31,7 @@ module.exports = class Invoker {
   }
 
   validateEvent(event) {
-    if (!event) {
-      throw TypeError('The parameter should not be null or undefined')
-    }
-
-    if (!event['eventId']) {
+    if (!event || !event['eventId']) {
       throw TypeError('The parameter should have a property "eventId"')
     }
   }
