@@ -1,4 +1,4 @@
-;(function() {
+(function() {
   const CarManager = {
     // request information
     requestInfo: (model, id) => {
