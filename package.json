@@ -20,7 +20,7 @@
   "devDependencies": {
     "@sinonjs/referee-sinon": "^5.0.0",
     "chai": "^4.2.0",
-    "eslint": "^5.9.0",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.2.0",
     "eslint-config-standard": "^12.0.0",
